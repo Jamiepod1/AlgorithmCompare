@@ -25,7 +25,7 @@ class Algorithm():
             sum_of_tests = []
             for repeat in range(0, repeats):
                 sum_of_tests.append(self.timer(algorithm, (self.test_dict[test])))
-            results.append(np.log(sum(sum_of_tests) / len(sum_of_tests) + 100))
+            results.append(sum(sum_of_tests) / len(sum_of_tests))
         x = [number for number in range(1, number_of_tests + 1)]
         y = results
         return (x, y)

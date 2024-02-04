@@ -78,6 +78,8 @@ def run_test(number_of_tests, repeats, algorithm, progress, root, tests_to_run, 
         fig = px.scatter()
         for result in results.keys():
             fig.add_scatter(x=results[result][0], y=results[result][1], name=result, mode='markers')
+        fig.update_xaxes(title_text="List length")
+        fig.update_yaxes(title_text="Average time to sort (s)")
         fig.show()
         progress.stop()
 
